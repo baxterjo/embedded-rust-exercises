@@ -17,7 +17,7 @@ fn main() -> ! {
 
     // puzzle-fw uses channel 25 by default
     // NOTE if you ran `change-channel` then you may need to update the channel here
-    radio.set_channel(Channel::_25); // <- must match the Dongle's listening channel
+    radio.set_channel(Channel::_20); // <- must match the Dongle's listening channel
 
     // the IEEE 802.15.4 packet that will carry our data
     let mut packet = Packet::new();

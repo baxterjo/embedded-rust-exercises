@@ -32,7 +32,7 @@ fn main() -> ! {
     radio.send(&mut packet);
 
     // TODO try uncommenting this line
-    // timer.wait(core::time::Duration::from_micros(1000));
+    timer.wait(core::time::Duration::from_millis(1000));
 
     let res = radio.recv_timeout(&mut packet, &mut timer, TEN_MS);
 

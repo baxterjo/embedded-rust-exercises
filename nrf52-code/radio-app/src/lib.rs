@@ -5,7 +5,7 @@ use cortex_m_rt::exception;
 /// Our custom panic handler.
 #[panic_handler]
 fn panic(info: &core::panic::PanicInfo) -> ! {
-    defmt::error!("{}", defmt::Display2Format(info));
+    defmt::error!("Oops!! {}", defmt::Debug2Format(info));
     dk::fail();
 }
 

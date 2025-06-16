@@ -6,13 +6,16 @@ runner = [
   "run",
   "--chip=nRF52840_xxAA",
   "--allow-erase-all",
-  "--log-format=oneline"
+  "--log-format=oneline",
 ]
 
 rustflags = [
-  "-C", "link-arg=-Tlink.x", # use the cortex-m-rt linker script
-  "-C", "linker=flip-link", # adds stack overflow protection
-  "-C", "link-arg=-Tdefmt.x", # defmt support
+  "-C",
+  "link-arg=-Tlink.x",  # use the cortex-m-rt linker script
+  "-C",
+  "linker=flip-link",   # adds stack overflow protection
+  "-C",
+  "link-arg=-Tdefmt.x", # defmt support
 ]
 
 [build]
